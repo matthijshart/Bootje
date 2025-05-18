@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Borrelboot Amsterdam</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f9f9f9;
+      color: #2c2c2c;
+    }
+
+    header {
+      background-image: url('IMG_3312.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .slogan {
+      font-size: 28px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 16px 24px;
+      border-radius: 8px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      font-size: 24px;
+      animation: bounce 2s infinite;
+      color: white;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(6px); opacity: 1; }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .feature {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .availability {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .availability span {
+      display: inline-block;
+      margin: 6px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .available {
+      background: #d0f0d0;
+      color: #207020;
+    }
+
+    .unavailable {
+      background: #f8d0d0;
+      color: #902020;
+    }
+
+    form {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, textarea, button {
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #D32F2F;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b51c1c;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="slogan">Jij regelt de mensen, wij de rest</div>
+  <div class="scroll-indicator">↓</div>
+</header>
+
+<section class="section">
+  <h2 style="text-align:center;">Waarom deze boot?</h2>
+  <div class="features">
+    <div class="feature">Tot 55 personen</div>
+    <div class="feature">Grote borreltafel</div>
+    <div class="feature">Toilet aan boord</div>
+    <div class="feature">Zachte kussens & fijne banken</div>
+    <div class="feature">Speakers voor jouw muziek</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Zin in iets bijzonders op het water?</h2>
+  <p style="text-align:center; max-width:700px; margin:auto; font-size:16px; line-height:1.6;">
+    Van kleine privévaartjes tot teamuitjes, verjaardagen, businessborrels, 21-diners, moeder-dochterdagen,
+    vrijgezellenfeesten of iets totaal anders – alles is mogelijk. 
+    <br><br>
+    Heb je een idee of gewoon een vraag? 
+    <strong>Stuur ons gerust een WhatsAppje</strong>, dan denken we direct met je mee.
+  </p>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="https://wa.me/31624978211" 
+       style="display:inline-block; padding:12px 24px; background:#25D366; color:white; text-decoration:none; font-weight:bold; border-radius:4px;">
+      WhatsApp ons op 06 24 97 82 11
+    </a>
+  </div>
+</section>
+
+<section class="section availability">
+  <h2>Beschikbaarheid augustus</h2>
+  <p>
+    <span class="unavailable">21 aug – vol</span>
+    <span class="unavailable">22 aug – vol</span>
+    <span class="available">23 aug – beschikbaar</span>
+    <span class="available">24 aug – beschikbaar</span>
+  </p>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Boekingsaanvraag</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" name="naam" placeholder="Jouw naam" required />
+    <input type="email" name="email" placeholder="E-mailadres" required />
+    <input type="text" name="telefoon" placeholder="Telefoonnummer" required />
+    <input type="text" name="datum" placeholder="Voorkeursdatum (bv. 23 aug)" />
+    <input type="text" name="personen" placeholder="Aantal personen" />
+    <textarea name="bericht" placeholder="Vragen of wensen"></textarea>
+    <button type="submit">Verzend aanvraag</button>
+  </form>
+</section>
+
+<section class="section gallery">
+  <h2 style="text-align:center;">Impressie</h2>
+  <img src="IMG_3312.jpeg" alt="Borrelsfeer" />
+  <img src="IMG_3313.PNG" alt="Boot van bovenaf" />
+</section>
+
+</body>
+</html>
