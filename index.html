@@ -35,28 +35,37 @@
     .slogan {
       font-size: 36px;
       font-weight: 600;
-      color: #fff;
-      max-width: 80%;
+      color: white;
+      background: rgba(0, 0, 0, 0.5); /* semi-transparant zwart */
+      padding: 16px 24px;
+      border-radius: 8px;
+      max-width: 90%;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
     }
 
     .scroll-indicator {
-      position: absolute;
-      bottom: 24px;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 32px;
       animation: bounce 2s infinite;
-      color: white;
+      color: #444;
+      background: rgba(255,255,255,0.8);
+      padding: 8px 14px;
+      border-radius: 50px;
       text-decoration: none;
-      cursor: pointer;
+      z-index: 10;
       transition: transform 0.2s ease;
     }
 
     .scroll-indicator:hover {
-      transform: scale(1.2);
+      transform: translateX(-50%) scale(1.15);
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(10px); opacity: 1; }
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
+      50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
     }
 
     .section {
@@ -125,8 +134,9 @@
 
 <header>
   <div class="slogan">Jij regelt de mensen, wij de rest</div>
-  <a href="#start" class="scroll-indicator">↓</a>
 </header>
+
+<a href="#start" class="scroll-indicator">↓</a>
 
 <section class="section" id="start">
   <h2>Waarom deze boot?</h2>
