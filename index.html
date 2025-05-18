@@ -33,7 +33,7 @@
     }
 
     .slogan {
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 600;
       color: #fff;
       max-width: 80%;
@@ -41,16 +41,22 @@
 
     .scroll-indicator {
       position: absolute;
-      bottom: 32px;
-      font-size: 28px;
+      bottom: 24px;
+      font-size: 32px;
       animation: bounce 2s infinite;
       color: white;
       text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .scroll-indicator:hover {
+      transform: scale(1.2);
     }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(8px); opacity: 1; }
+      50% { transform: translateY(10px); opacity: 1; }
     }
 
     .section {
@@ -73,7 +79,7 @@
     }
 
     .feature {
-      flex: 1 1 240px;
+      flex: 1 1 220px;
       text-align: center;
       font-weight: 500;
       padding: 10px;
@@ -107,7 +113,6 @@
       width: 100%;
       border-radius: 12px;
       margin-top: 30px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
     }
 
